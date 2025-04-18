@@ -32,7 +32,7 @@ class CatViewSet(viewsets.ModelViewSet):
         # и разрешим работу со списком объектов
         serializer = self.get_serializer(cats, many=True)
         return Response(serializer.data)
-    
+
     def get_serializer_class(self):
         # Если запрошенное действие (action) — получение списка объектов ('list')
         if self.action == 'list':
